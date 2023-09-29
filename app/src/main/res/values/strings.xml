@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">TF2 Servers</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu">Menu</string>
+    <string name="add_server">Add Server</string>
+    <string name="add_this_server">Add this server</string>
+
+    <string name="port">PORT</string>
+    <string name="address">ADDRESS</string>
+
+    <string name="folder">Folder:</string>
+    <string name="protocol">Protocol:</string>
+    <string name="connection">Connection:</string>
 </resources>

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.gigcreator.data.models.Server
+import com.gigcreator.data.models.ServerJson
 import com.gigcreator.tf2servers.R
 import com.gigcreator.tf2servers.presentation.fragment.ListFragment
 import com.gigcreator.tf2servers.presentation.rcview.holder.ListHolder
@@ -19,18 +20,21 @@ class ListAdapter(private val fragment: ListFragment): RecyclerView.Adapter<List
 
     override fun onBindViewHolder(holder: ListHolder, position: Int) {
         holder.bind(listServer[position])
+        val b = holder.getBinding()
+
+        b.buttonDeleteServer.setOnClickListener {
+            listServer.remove(listServer[position])
+            fragment.deleteServer(listServer)
+            notifyDataSetChanged()
+        }
     }
 
     override fun getItemCount(): Int {
         return listServer.size
     }
+
     fun add(server: Server){
         listServer.add(server)
-        notifyDataSetChanged()
-    }
-
-    fun clear() {
-        listServer.clear()
         notifyDataSetChanged()
     }
 }

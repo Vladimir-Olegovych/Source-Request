@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".presentation.fragment.AddServerFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Toolbar">
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:text="@string/add_server"
+            style="@style/TextView_Heading"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/button_add_server"
+        style="@style/Button_AddServer"
+        android:text="@string/add_this_server"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editText_address"
+        style="@style/EditText_AP"
+        android:ems="10"
+        android:hint="@string/address"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/server"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editText_port"
+        style="@style/EditText_AP"
+        android:layout_marginStart="16dp"
+        android:ems="5"
+        android:hint="@string/port"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_address"
+        app:layout_constraintTop_toBottomOf="@+id/server"
+        android:autofillHints="" />
+
+    <include
+        android:id="@+id/server"
+        layout="@layout/server_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView_connection"
+        style="@style/TextView_For"
+        android:text="@string/connection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_address" />
+
+    <TextView
+        android:id="@+id/textView_protocol"
+        style="@style/TextView_For"
+        android:text="@string/protocol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_connection" />
+
+    <TextView
+        android:id="@+id/textView_folder"
+        style="@style/TextView_For"
+        android:text="@string/folder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_protocol" />
+
+    <TextView
+        android:id="@+id/textView_connection_result"
+        style="@style/TextView_For"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textView_connection"
+        app:layout_constraintTop_toBottomOf="@+id/editText_address" />
+
+    <TextView
+        android:id="@+id/textView_protocol_result"
+        style="@style/TextView_For"
+        app:layout_constraintStart_toEndOf="@+id/textView_protocol"
+        app:layout_constraintTop_toBottomOf="@+id/textView_connection_result" />
+
+    <TextView
+        android:id="@+id/textView_folder_result"
+        style="@style/TextView_For"
+        app:layout_constraintStart_toEndOf="@+id/textView_folder"
+        app:layout_constraintTop_toBottomOf="@+id/textView_protocol_result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,5 +9,13 @@
         android:id="@+id/listFragment"
         android:name="com.gigcreator.tf2servers.presentation.fragment.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addServerFragment"
+            app:destination="@id/addServerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addServerFragment"
+        android:name="com.gigcreator.tf2servers.presentation.fragment.AddServerFragment"
+        android:label="AddServerFragment" />
 </navigation>

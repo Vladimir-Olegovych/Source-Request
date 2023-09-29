@@ -8,13 +8,11 @@ import java.io.ByteArrayOutputStream
 import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
-import java.util.concurrent.Executors
 
 class ServerRepositoryImpl: ServerRepository {
 
     private val socket = DatagramSocket()
     private val defaultRequest = createRequest()
-    private val executor = Executors.newSingleThreadExecutor()
 
     override fun getServer(address: String, port: Int): Server =
         try {
@@ -58,12 +56,9 @@ class ServerRepositoryImpl: ServerRepository {
     }
 
 
-
     override fun close() {
         socket.close()
     }
-
-
 
     companion object {
 

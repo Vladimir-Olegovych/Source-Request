@@ -9,6 +9,6 @@
     <color name="background_card">#313335</color>
     <color name="gray">#A9B7C6</color>
     <color name="button">#5C6164</color>
-    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
     <color name="blue">#014D70</color>
 </resources>

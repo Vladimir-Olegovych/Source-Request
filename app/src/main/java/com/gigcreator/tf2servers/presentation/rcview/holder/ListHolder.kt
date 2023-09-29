@@ -16,4 +16,6 @@ class ListHolder(item: View): RecyclerView.ViewHolder(item){
         textViewMap.text = "map: ${new.mapName}"
         textViewPlayers.text = "players: ${new.playerCount}/${new.maxPlayers}"
     }
+
+    fun getBinding(): ServerItemBinding = binding
 }

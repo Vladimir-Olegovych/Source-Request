@@ -1,6 +1,6 @@
 package com.gigcreator.data.models
 
-class Server(var address: String = "",
+class Server(var address: String = "0.0.0.0",
              var port: Int = 0,
              var protocol: Int = 0,
              var serverName: String = "",
